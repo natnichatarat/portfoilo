@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Natnicha Tarat - Portfolio</title>
+    <meta name="description" content="Backend & Mobile App Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .nav-link.active {
+            border-bottom: 2px solid #FCD34D;
+        }
+        
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color: #3B82F6;
+            margin: 8px auto 0;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            border-radius: 10px;
+            background-color: #E5E7EB;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(to right, #3B82F6, #1D4ED8);
+            transition: width 1s ease-in-out;
+        }
+        
+        .animated {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-800 shadow-lg fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl text-white font-bold flex items-center">opal</a>
+            <nav class="hidden md:flex space-x-8 text-white">
+                <a href="#home" class="nav-link font-medium hover:text-yellow-300 transition pb-1 active">Home</a>
+                <a href="#about" class="nav-link font-medium hover:text-yellow-300 transition pb-1">About</a>
+                <a href="#skills" class="nav-link font-medium hover:text-yellow-300 transition pb-1">Skills</a>
+                <a href="#projects" class="nav-link font-medium hover:text-yellow-300 transition pb-1">Projects</a>
+                <a href="#experience" class="nav-link font-medium hover:text-yellow-300 transition pb-1">Experience</a>
+                <a href="#contact" class="nav-link font-medium hover:text-yellow-300 transition pb-1">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-indigo-900 pb-4">
+            <a href="#home" class="block text-white py-2 px-4 hover:bg-indigo-800">Home</a>
+            <a href="#about" class="block text-white py-2 px-4 hover:bg-indigo-800">About</a>
+            <a href="#skills" class="block text-white py-2 px-4 hover:bg-indigo-800">Skills</a>
+            <a href="#projects" class="block text-white py-2 px-4 hover:bg-indigo-800">Projects</a>
+            <a href="#experience" class="block text-white py-2 px-4 hover:bg-indigo-800">Experience</a>
+            <a href="#contact" class="block text-white py-2 px-4 hover:bg-indigo-800">Contact</a>
+        </div>
+    </header>
+
+    <section id="home" class="pt-16 pb-12 bg-gradient-to-b from-indigo-800 via-blue-700 to-blue-600 text-white  flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row itemsa-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 animated">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 pt-10">Hello, I'm <span class="text-yellow-300">Natnicha Tarat</span></h1>
+                    <h2 class="text-2xl md:text-3xl mb-6 text-blue-100">Backend Developer & Mobile App Developer</h2>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://media.discordapp.net/attachments/1220369694113005639/1364891786291445783/IMG_2249.jpg?ex=680b5208&is=680a0088&hm=c9c026c3aa170a515c7856294db60cad8ec5b6d8a1fef647239f783c87f9f569&=&format=webp&width=641&height=800" alt="Profile photo" class="rounded-full border-4 border-white shadow-xl w-64 h-64 object-cover">
+                </div>
+            </div>
+            <div class="flex mt-8">
+                <a href="https://github.com/natnichatarat" class="flex items-center bg-white/10 hover:bg-white/20 transition-all duration-300 rounded-full px-4 py-2 text-white group">
+                  <i class="fab fa-github text-xl mr-2 group-hover:rotate-12 transition-transform"></i>
+                  <span class="font-medium">GitHub</span>
+                  <i class="fas fa-external-link-alt ml-2 text-xs opacity-70"></i>
+                </a>
+              </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 section-title">About Me</h2>     
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-6 mt-0">               
+                    <div >
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            I am a third-year student in the Faculty of Engineering, majoring in Computer Engineering. 
+                            I am passionate about Web Development and Mobile App Development, constantly exploring 
+                            new technologies and approaches to create intuitive and efficient applications.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            I have strong interpersonal skills and enjoy learning new things. I am looking for an 
+                            internship opportunity to experience teamwork in a professional environment and am 
+                            ready to take on new challenges to develop myself professionally.
+                        </p>
+                    </div>                           
+            </div>
+            
+            <div class="grid grid-cols-1 gap-8 mt-4">
+                <div>
+                  <h3 class="text-xl font-semibold text-blue-700 mb-6 text-center">Education</h3>
+          
+                  <!-- กล่องแรก -->
+                  <div class="flex  justify-between">
+                    <div>
+                      <h4 class="text-blue-600 font-bold mb-1">Computer Engineering</h4>
+                      <p class="text-gray-700">University of Technology</p>
+                    </div>
+                    <p class="text-gray-500 text-right">2022 - Present</p>
+                  </div>
+                  <div class="flex justify-between">
+                    <div>
+                      <h4 class="text-blue-600 font-bold mb-1">Software Developer</h4>
+                      <p class="text-gray-700">Lampang Technical College</p>
+                    </div>
+                    <p class="text-gray-500 text-right">2020 - 2021</p>
+                  </div>
+            </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 section-title">My Skills</h2>     
+                <div class="bg-white rounded-lg shadow-lg p-8">   
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition">
+                            <i class="fas fa-code text-3xl text-blue-500 mb-2"></i>
+                            <p class="text-gray-700">Dart</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition">
+                            <i class="fas fa-fire text-3xl text-orange-500 mb-2"></i>
+                            <p class="text-gray-700">Firebase</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition">
+                            <i class="fab fa-html5 text-3xl text-orange-600 mb-2"></i>
+                            <p class="text-gray-700">HTML</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition">
+                            <i class="fas fa-laptop-code text-3xl text-blue-600 mb-2"></i>
+                            <p class="text-gray-700">C++</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition">
+                            <i class="fab fa-python text-3xl text-blue-800 mb-2"></i>
+                            <p class="text-gray-700">Python</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition">
+                            <i class="fab fa-php text-3xl text-purple-600 mb-2"></i>
+                            <p class="text-gray-700">PHP</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Placeholder) -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 section-title">My Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="h-48 bg-blue-700 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mobile Application Chatbot</h3>
+                        <p class="text-gray-600 mb-4">Developed a mobile application using Flutter for a dormitory recommendation Chatbot</p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Flutter</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">dialogflow</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Firebase</span>
+                        </div>
+                        <a href="card1.html" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                            View Details <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="h-48 bg-indigo-700 flex items-center justify-center">
+                        <i class="fas fa-microchip text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Arduino   Color Sorter</h3>
+                        <p class="text-gray-600 mb-4">develop an automatic color sorting simulation system using IoT technology and Arduino connected</p>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded">C++</span>
+                        </div>
+                        <a href="card2.html" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                            View Details <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="h-48 bg-purple-700 flex items-center justify-center">
+                        <i class="fas fa-laptop text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Time system In/Outof work of KAPOKE company </h3>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">PHP</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">html</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded">CSS</span>
+                        </div>
+                        <a href="card3.html" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                            View Details <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Placeholder) -->
+    <section id="experience" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 section-title">Experience</h2>
+                <!-- Timeline Item 1 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 items-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">IT Support</h3>
+                        <p class="text-blue-600 mb-4">JAN 2023 -  MAR 2021 </p>
+                        <p class="text-gray-600 mb-3">Internship position in IT Support with duties to provide consultation and basic troubleshooting for network systems.</p>
+                        
+                        
+                    </div>
+                </div>             
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container max-w-md mx-auto px-4 ">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 section-title">Contact Me</h2>          
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+               
+                    <div class="bg-gradient-to-br from-blue-700 to-indigo-800 p-8 text-white ">
+                        <h3 class="text-2xl font-semibold mb-6">Get In Touch</h3>
+                        
+                        <div class="space-y-4 ">
+                            <div class="flex items-center">
+                                <div class="bg-white/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-blue-100">opalnatni@email.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-white/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p class="text-blue-100">0821622589</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-white/10 p-3 rounded-full mr-4">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Likedin</h4>
+                                    <p class="text-blue-100">Natnicha Tarat</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-white/10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Location</h4>
+                                    <p class="text-blue-100">ChiangMai, Thailand</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </div>           
+        </div>
+        </section>
+
+                     
